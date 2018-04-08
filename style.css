@@ -1,0 +1,517 @@
+h1 {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.robots {
+	margin-top: 30px;
+}
+
+.head, 
+.left_arm, 
+.torso, 
+.right_arm, 
+.left_leg, 
+.right_leg,
+.left_horn,
+.right_horn {
+	 background-color: #5f93e8;
+}
+
+.head:hover,
+.left_arm:hover, 
+.torso:hover, 
+.right_arm:hover, 
+.left_leg:hover, 
+.right_leg:hover{
+	 background-color: yellowgreen;
+}
+.head:hover > .horns .left_horn, 
+.head:hover > .horns .right_horn {
+	background-color: yellowgreen;
+} 
+
+.head { 
+	width: 200px; 
+	margin: 0 auto; 
+	height: 150px; 
+	border-radius: 200px 200px 0 0; 
+	margin-bottom: 10px;
+} 
+
+.upper_body { 
+	/*background-color: black;*/
+	width: 100%; 
+	height: 150px;
+	display: flex; 
+	justify-content: center; 
+} 
+
+.left_arm, .right_arm { 
+	width: 40px; 
+	height: 125px;
+	border-radius: 100px;
+	/*background-color: red; */
+} 
+
+.left_arm { 
+	margin-right: 10px; 
+} 
+
+.right_arm { 
+	margin-left: 10px; 
+} 
+
+.torso { 
+	width: 200px; 
+	height: 200px;
+	border-radius: 0 0 50px 50px; 
+} 
+
+.lower_body { 
+	/*background-color: black;*/
+	width: 200px; 
+	height: 200px;
+	margin: 0 auto;
+} 
+
+.left_leg, .right_leg { 
+	width: 40px; 
+	height: 120px;
+	border-radius: 0 0 100px 100px; 
+	display: inline-block;
+} 
+
+.left_leg { 
+	margin-left: 45px; 
+} 
+
+.right_leg { 
+	margin-left: 30px; 
+}
+.right_leg:hover {
+	-webkit-transform: translateY(-100px);
+    -moz-transform: translateY(-100px);
+    -o-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    transform: translateY(-20px);
+}
+
+.left_eye, .right_eye { 
+	width: 20px; 
+	height: 20px; 
+	border-radius: 15px; 
+	background-color: white;  
+	display: inline-block;
+} 
+.left_eye { 
+	position: relative; 
+	top: 100px; 
+	left: 40px; 
+} 
+.right_eye { 
+	position: relative; 
+	top: 100px; 
+	left: 120px; 
+}
+
+.horns {
+	position: relative;
+	top:-25px;
+}
+.left_horn, .right_horn {
+	display: inline-block;
+	width: 5px;
+	height: 40px;
+	border-radius:100px 100px 0 0;	
+}
+.left_horn {
+	position: relative;
+	top: 30px;
+	left: 105px;
+	-webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+	transform: rotate(-30deg);
+}
+.right_horn {
+	position: relative;
+	top: 30px;
+	left: 130px;
+	-webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+	transform: rotate(30deg);
+}
+
+/*right arm animation - start ******************************************/
+/* 1st - raise animation*/
+#raise {
+	-webkit-transform-origin: left top;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-name: raise;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-delay: 1s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-play-state: running;
+
+	-moz-transform-origin: left top;
+	-moz-animation-duration: 1s;
+	-moz-animation-name: raise;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-animation-delay: 1s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-direction: normal;
+	-moz-animation-fill-mode: forwards;
+	-moz-animation-play-state: running;
+
+	-o-transform-origin: left top;
+	-o-animation-duration: 1s;
+	-o-animation-name: raise;
+	-o-animation-timing-function: ease-in-out;
+	-o-animation-delay: 1s;
+	-o-animation-iteration-count: 1;
+	-o-animation-direction: normal;
+	-o-animation-fill-mode: forwards;
+	-o-animation-play-state: running;
+
+	-ms-transform-origin: left top;
+	-ms-animation-duration: 1s;
+	-ms-animation-name: raise;
+	-ms-animation-timing-function: ease-in-out;
+	-ms-animation-delay: 1s;
+	-ms-animation-iteration-count: 1;
+	-ms-animation-direction: normal;
+	-ms-animation-fill-mode: forwards;
+	-ms-animation-play-state: running;
+
+	transform-origin: left top;
+	animation-duration: 1s;
+	animation-name: raise;
+	animation-timing-function: ease-in-out;
+	animation-delay: 1s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+}
+/* 2nd - wave animation*/
+#wave {
+	-webkit-transform-origin: left top;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: wave;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-delay: 2s;
+	-webkit-animation-iteration-count: 2;
+	-webkit-animation-direction: normal;
+	-webkit-animation-fill-mode: normal;
+	-webkit-animation-play-state: running;
+
+	-moz-transform-origin: left top;
+	-moz-animation-duration: 1.5s;
+	-moz-animation-name: wave;
+	-moz-animation-timing-function: ease-in-out;
+	-moz-animation-delay: 2s;
+	-moz-animation-iteration-count: 2;
+	-moz-animation-direction: normal;
+	-moz-animation-fill-mode: normal;
+	-moz-animation-play-state: running;
+
+	-o-transform-origin: left top;
+	-o-animation-duration: 1.5s;
+	-o-animation-name: wave;
+	-o-animation-timing-function: ease-in-out;
+	-o-animation-delay: 2s;
+	-o-animation-iteration-count: 2;
+	-o-animation-direction: normal;
+	-o-animation-fill-mode: normal;
+	-o-animation-play-state: running;
+
+	-ms-transform-origin: left top;
+	-ms-animation-duration: 1.5s;
+	-ms-animation-name: wave;
+	-ms-animation-timing-function: ease-in-out;
+	-ms-animation-delay: 2s;
+	-ms-animation-iteration-count: 2;
+	-ms-animation-direction: normal;
+	-ms-animation-fill-mode: normal;
+	-ms-animation-play-state: running;
+
+	transform-origin: left top;
+	animation-duration: 1.5s;
+	animation-name: wave;
+	animation-timing-function: ease-in-out;
+	animation-delay: 2s;
+	animation-iteration-count: 2;
+	animation-direction: normal;
+	animation-fill-mode: normal;
+	animation-play-state: running;
+}
+/* 3rd - down animation*/
+.right_arm {
+	-webkit-transform-origin: left top;
+	-webkit-animation-duration: .5s;
+	-webkit-animation-name: down;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-delay: 6s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-play-state: running;
+
+	-moz-transform-origin: left top;
+	-moz-animation-duration: .5s;
+	-moz-animation-name: down;
+	-moz-animation-timing-function: ease-out;
+	-moz-animation-delay: 6s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-direction: normal;
+	-moz-animation-fill-mode: forwards;
+	-moz-animation-play-state: running;
+
+	-o-transform-origin: left top;
+	-o-animation-duration: .5s;
+	-o-animation-name: down;
+	-o-animation-timing-function: ease-out;
+	-o-animation-delay: 6s;
+	-o-animation-iteration-count: 1;
+	-o-animation-direction: normal;
+	-o-animation-fill-mode: forwards;
+	-o-animation-play-state: running;
+
+	-ms-transform-origin: left top;
+	-ms-animation-duration: .5s;
+	-ms-animation-name: down;
+	-ms-animation-timing-function: ease-out;
+	-ms-animation-delay: 6s;
+	-ms-animation-iteration-count: 1;
+	-ms-animation-direction: normal;
+	-ms-animation-fill-mode: forwards;
+	-ms-animation-play-state: running;
+
+	transform-origin: left top;
+	animation-duration: .5s;
+	animation-name: down;
+	animation-timing-function: ease-out;
+	animation-delay: 6s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+}
+
+/* 2 - trigger animation*/
+/*auto play*/
+
+/* 3 - what animation does*/
+@keyframes raise {
+	100% {
+		-webkit-transform: rotate(-150deg) translateX(-60px);
+    	   -moz-transform: rotate(-150deg) translateX(-60px);
+    		 -o-transform: rotate(-150deg) translateX(-60px);
+    		-ms-transform: rotate(-150deg) translateX(-60px);
+				transform: rotate(-150deg) translateX(-60px);
+	}
+}
+
+@keyframes wave {
+	0% {
+	}
+	50% {
+		-webkit-transform: rotate(-20deg);
+    	   -moz-transform: rotate(-20deg);
+    		 -o-transform: rotate(-20deg);
+    		-ms-transform: rotate(-20deg);
+				transform: rotate(-20deg);
+	}
+	100% {
+ 		-webkit-transform: rotate(10deg);
+    	   -moz-transform: rotate(10deg);
+    		 -o-transform: rotate(10deg);
+    		-ms-transform: rotate(10deg);
+ 				transform: rotate(10deg);
+	}
+}
+
+@keyframes down {
+	50% {
+		width: 42.5px;
+		height: 137.5px;
+	}
+	100% {
+		width: 45px;
+		height: 150px;
+		background-color: yellowgreen;
+		-webkit-transform: rotate(150deg) translateX(-32.5px) translateY(-25px);
+    	   -moz-transform: rotate(150deg) translateX(-32.5px) translateY(-25px);
+    		 -o-transform: rotate(150deg) translateX(-32.5px) translateY(-25px);
+    		-ms-transform: rotate(150deg) translateX(-32.5px) translateY(-25px);
+				transform: rotate(150deg) translateX(-32.5px) translateY(-25px);
+	}
+}
+/*right arm animation - end ******************************************/
+
+.left_arm {
+	position: relative;
+	-webkit-transform-origin: right top;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-name: up;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-delay: 0;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-direction: normal;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-play-state: paused;
+
+	-moz-transform-origin: right top;
+	-moz-animation-duration: 1s;
+	-moz-animation-name: up;
+	-moz-animation-timing-function: ease-out;
+	-moz-animation-delay: 0;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-direction: normal;
+	-moz-animation-fill-mode: forwards;
+	-moz-animation-play-state: paused;
+
+	-o-transform-origin: right top;
+	-o-animation-duration: 1s;
+	-o-animation-name: up;
+	-o-animation-timing-function: ease-out;
+	-o-animation-delay: 0;
+	-o-animation-iteration-count: 1;
+	-o-animation-direction: normal;
+	-o-animation-fill-mode: forwards;
+	-o-animation-play-state: paused;
+
+	-ms-transform-origin: right top;
+	-ms-animation-duration: 1s;
+	-ms-animation-name: up;
+	-ms-animation-timing-function: ease-out;
+	-ms-animation-delay: 0;
+	-ms-animation-iteration-count: 1;
+	-ms-animation-direction: normal;
+	-ms-animation-fill-mode: forwards;
+	-ms-animation-play-state: paused;
+
+	transform-origin: right top;
+	animation-duration: 1s;
+	animation-name: up;
+	animation-timing-function: ease-out;
+	animation-delay: 0;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+}
+.left_arm:hover {
+	-webkit-animation-play-state: running;
+	-moz-animation-play-state: running;
+	-o-animation-play-state: running;
+	-ms-animation-play-state: running;
+	animation-play-state: running;
+}
+
+.leftpeace, .rightpeace {
+	width: 9px;
+	height: 40px;
+	border-radius: 0 0 10px 10px;
+	
+	animation-duration: 1s;
+	animation-name: peace;
+	animation-timing-function: ease-out;
+	animation-delay: 0;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+}
+.leftpeace {
+	position: absolute;
+	top: 140px;
+	right: 27px;
+	transform-origin: top right;
+	transform: rotate(-10deg);
+}
+.rightpeace {
+	position: absolute;
+	top: 145px;
+	right: 31px;
+	transform-origin: top right;
+	transform: rotate(20deg);
+}
+
+.left_arm:hover > .leftpeace, .left_arm:hover > .rightpeace {
+	animation-play-state: running;
+} 
+	@keyframes peace {
+		0% {
+			opacity: 0;
+		}
+		98% {
+			opacity: 0;
+		}
+		100% {
+			background-color: yellowgreen;
+			opacity: 1;
+		}
+	}
+
+@keyframes up {
+	0% {
+	}
+	50% {
+		width: 42.5px;
+		height: 137.5px;
+	}
+	100% {
+		width: 45px;
+		height: 150px;
+		background-color: yellowgreen;
+		-webkit-transform: rotate(150deg) translateX(34px) translateY(25px);
+    	   -moz-transform: rotate(150deg) translateX(34px) translateY(25px);
+    		 -o-transform: rotate(150deg) translateX(34px) translateY(25px);
+    		-ms-transform: rotate(150deg) translateX(34px) translateY(25px);
+				transform: rotate(150deg) translateX(34px) translateY(25px);
+	}
+}
+
+/*speech bubble*/
+html{
+	height: 100%;
+}
+body {
+	height: 100%;
+	min-width: 350px;
+	margin: 0;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+.speech-bubble { 
+	font-family: 'Press Start 2P', cursive;
+	color: white;
+	font-size: 20px;
+	position: relative; 
+	background: grey; 
+	border-radius: 10px;
+	padding: 20px 10px;
+	margin: 0 auto;
+} 
+.speech-bubble:after { 
+	content: ''; 
+	position: absolute; 
+	bottom: 0; 
+	left: 70%; 
+	width: 0; 
+	height: 0; 
+	border: 23px solid transparent; 
+	border-top-color: grey; 
+	border-bottom: 0; 
+	border-left: 0; 
+	margin-left: -11.5px; 
+	margin-bottom: -23px; 
+}

@@ -1,0 +1,177 @@
+.head {
+	animation-name: inflate; 
+	animation-duration: .5s; 
+	animation-timing-function: ease-in-out;
+	animation-delay: 0;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards; 
+	animation-play-state: paused;
+}
+.head:hover {
+	animation-play-state: running;
+}
+@keyframes inflate {
+	to {
+		width: 300px;
+		background-color: yellowgreen;
+	}
+}
+
+.left_horn {
+	animation-name: pointleft; 
+	animation-duration: 1s; 
+	animation-timing-function: ease-in-out;
+	animation-delay: 0;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards; 
+	animation-play-state: paused;
+}
+.head:hover > .horns .left_horn {
+	animation-play-state: running;
+}
+@keyframes pointleft {
+	100% {
+		background-color: yellowgreen;
+		transform: rotate(-30deg) translateX(-15px) translateY(-61px);
+	}
+}
+
+.right_horn {
+	animation-name: pointright; 
+	animation-duration: 1s; 
+	animation-timing-function: ease-in-out;
+	animation-delay: 0;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards; 
+	animation-play-state: paused;
+}
+.head:hover > .horns .right_horn {
+	animation-play-state: running;
+}
+@keyframes pointright {
+	100% {
+		background-color: yellowgreen;
+		transform: rotate(30deg) translateX(55px) translateY(-85px);
+	}
+}
+
+.torso {
+	position: relative;
+	animation-name: fatten; 
+	animation-duration: 1s; 
+	animation-timing-function: ease-in-out;
+	animation-delay: 0;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards; 
+	animation-play-state: paused;
+}
+.stripe {
+	margin-left: 174px;
+	background-color: white;
+	width: 10px;
+	height: 200px;
+
+	position: relative;
+	animation-name: stripey; 
+	animation-duration: 1s; 
+	animation-timing-function: ease-in-out;
+	animation-delay: 0;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards; 
+	animation-play-state: paused;
+}	
+.torso:hover, .torso:hover > .stripe {
+	animation-play-state: running;
+	display: block;
+}
+	@keyframes stripey {
+		0% {
+			opacity: 0;
+		}
+		98% {
+			opacity: 0;
+		}
+		100% {
+			background-color: white;
+			opacity: 1;
+		}
+	}
+@keyframes fatten {
+	100% {
+		background-color: yellowgreen;
+		width: 300px;
+	}
+}
+
+.left_leg {
+	animation-name: lengthenleft; 
+	animation-duration: 1s; 
+	animation-timing-function: ease-in-out;
+	animation-delay: 0;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards; 
+	animation-play-state: paused;
+}
+.left_leg:hover {
+    animation-play-state: running;
+    -webkit-transform: rotate(20deg);
+       -moz-transform: rotate(20deg);
+         -o-transform: rotate(20deg);
+   	    -ms-transform: rotate(20deg);
+   			transform: rotate(20deg);
+}
+@keyframes lengthenleft {
+	100% {
+		background-color: yellowgreen;
+		height: 125px;
+		width: 45px;
+		margin-left: 0;
+		margin-right: 40px;
+	}
+}
+
+.right_leg {
+	animation-name: lengthenright; 
+	animation-duration: 1s; 
+	animation-timing-function: ease-in-out;
+	animation-delay: 0;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards; 
+	animation-play-state: paused;
+}
+.right_leg:hover {
+    animation-play-state: running;
+}
+@keyframes lengthenright {
+	100% {
+		background-color: yellowgreen;
+		height: 125px;
+		width: 45px;
+		margin-right: 0;
+		margin-left: 45px;
+	}
+}
+
+.eyes {
+	position: relative;
+}
+.eyes:hover > .right_eye {
+	background-color: white;
+    width: 20px; 
+	height: 10px; 
+	border-radius: 0 0 25px 25px; 
+}
+
+@media (max-width: 500px) {
+	.robots
+	{
+		transform: scale(0.8);
+	}
+}
